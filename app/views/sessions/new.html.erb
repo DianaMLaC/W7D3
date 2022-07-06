@@ -1,0 +1,20 @@
+<h2 class='page-header'>Sign in</h2>
+
+<a class='button' href=<%= new_user_url %> >Go to Sign up!</a>
+
+<form action="<%= session_url %>" method="post">
+    <input
+    type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+    <label for="new_user_email">Email:</label>
+    <input type="text" id="new_user_email" name="user[email]">
+    <br />
+
+    <label for="new_user_password">Password:</label>
+    <input type="password" id="new_user_password" name="user[password]">
+    <br />
+
+    <input type="Submit">
+</form>
