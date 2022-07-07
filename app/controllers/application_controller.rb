@@ -8,11 +8,11 @@ class ApplicationController < ActionController::Base
     end
 
     def require_logged_out
-        redirect_to users_url if logegd_in?
+        redirect_to users_url if logged_in?
     end
 
     def require_logged_in
-        redirect_to users_url unless logegd_in?
+        redirect_to users_url unless logged_in?
     end
 
     def logged_in?

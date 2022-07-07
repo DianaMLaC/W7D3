@@ -2,7 +2,7 @@ class BandsController < ApplicationController
     before_action :require_logged_in
     def index
         @bands = Band.all
-        render :new
+        render :index
     end
 
     def create
@@ -10,7 +10,7 @@ class BandsController < ApplicationController
         if @band.save
             redirect_to band_url(@band)
         else  
-            flash[:errors] = @band.errors_full_messages
+            flash[:errors] = @band.errors.full_messages
             render :new
         end 
     end

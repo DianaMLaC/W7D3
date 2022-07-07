@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
 
     def show
-        @band = Band.find(params[:id])
+        @user = User.find(params[:id])
         render :show
         
     end
